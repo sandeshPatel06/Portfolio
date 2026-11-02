@@ -305,14 +305,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           form.reset();
           statusText.className = "status-success";
-          statusText.innerHTML = "✅ <strong>Inquiry Sent!</strong> Thank you for reaching out. Sandesh will reply within 24 hours.";
+          statusText.innerHTML = "<strong>Inquiry Sent!</strong> Thank you for reaching out. Sandesh will reply within 24 hours.";
         } else {
           statusText.className = "status-error";
-          statusText.innerHTML = "❌ <strong>Could not send.</strong> Please email directly at <a href='mailto:sandeshpatel.sp.93@gmail.com'>sandeshpatel.sp.93@gmail.com</a>.";
+          statusText.innerHTML = "<strong>Could not send.</strong> Please email directly at <a href='mailto:sandeshpatel.sp.93@gmail.com'>sandeshpatel.sp.93@gmail.com</a>.";
         }
       } catch (error) {
         statusText.className = "status-error";
-        statusText.innerHTML = "❌ <strong>Network problem.</strong> Please email directly at <a href='mailto:sandeshpatel.sp.93@gmail.com'>sandeshpatel.sp.93@gmail.com</a>.";
+        statusText.innerHTML = "<strong>Network problem.</strong> Please email directly at <a href='mailto:sandeshpatel.sp.93@gmail.com'>sandeshpatel.sp.93@gmail.com</a>.";
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -333,10 +333,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
     html.setAttribute("data-theme", "dark");
-    if (themeToggle) themeToggle.textContent = "☀️";
   } else {
     html.removeAttribute("data-theme");
-    if (themeToggle) themeToggle.textContent = "🌙";
   }
 
   if (themeToggle) {
@@ -345,11 +343,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentTheme === "dark") {
         html.removeAttribute("data-theme");
         localStorage.setItem("theme", "light");
-        themeToggle.textContent = "🌙";
       } else {
         html.setAttribute("data-theme", "dark");
         localStorage.setItem("theme", "dark");
-        themeToggle.textContent = "☀️";
       }
       themeToggle.blur();
     });

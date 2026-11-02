@@ -11,20 +11,7 @@
   "theme_color": "#4f46e5",
   "background_color": "#f1f5f9",
   "categories": ["portfolio", "developer", "business"],
-  "icons": [
-    {
-      "src": "/img/favicon.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/img/favicon.webp",
-      "sizes": "512x512",
-      "type": "image/webp",
-      "purpose": "any"
-    }
-  ],
+  "icons": [ { "src": "/img/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }, { "src": "/img/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" } ],
   "shortcuts": [
     {
       "name": "Contact Sandesh",

@@ -9,8 +9,8 @@
   <meta name="keywords" content="Sandesh Patel, Portfolio, Full Stack Developer, Go Developer, Golang, Python, Vue.js, TypeScript, Tailwind CSS, Freelance Web Developer, AI Agents, Hardware Streaming, Jabalpur">
   <meta name="author" content="Sandesh Patel">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="theme-color" content="#f1f5f9" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Sandesh Patel | Full-Stack Developer & Freelance Software Engineer">
   <meta property="og:description" content="Explore production web applications, AI agents, hardware-integrated streaming systems, and freelance engineering services by Sandesh Patel.">
@@ -30,6 +30,7 @@
   <meta name="twitter:description" content="Explore production web applications, AI agents, hardware-integrated streaming systems, and freelance engineering services by Sandesh Patel.">
   <meta name="twitter:image" content="https://sandesh-portfolio.pages.dev/img/sandesh_github.webp">
   <meta name="twitter:image:alt" content="Sandesh Patel - Full-Stack Developer & Systems Engineer">
+  <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="img/favicon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -37,7 +38,7 @@
   <link rel="author" type="text/plain" title="humans.txt" href="humans.txt" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space%20Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>Sandesh Patel | Full-Stack Developer & Software Engineer</title>
   <link rel="canonical" href="https://sandesh-portfolio.pages.dev/">
   <link rel="stylesheet" href="all-in-one.css">
@@ -524,7 +525,10 @@
       </div>
       <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme"
-          title="Toggle theme">🌙</button>
+          title="Toggle theme">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
         <a href="#contact" class="nav-cta-btn" title="Contact Sandesh">Hire Me</a>
         <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
           <span class="menu-icon"></span>
@@ -539,7 +543,7 @@
       <div class="status-badge-hero">
         <span class="status-dot"></span> Available for Freelance & Contract Projects
       </div>
-      <h1>👋 Hi, I'm <span class="highlight-text">Sandesh Patel</span></h1>
+      <h1>Hi, I'm <span class="highlight-text">Sandesh Patel</span></h1>
       <p class="hero-role-line">I'm a <span id="element"></span></p>
       <p class="hero-subtext">I build web apps, backend APIs, and real-time streaming tools. By day I work at REAK INFOTECH on hardware video feeds and telemetry dashboards. In the evenings, I build freelance MVPs and tools for clients.</p>
       <div class="buttons">
@@ -1504,7 +1508,7 @@
 
           <button type="submit" id="contact-submit-btn" class="btn contact-submit-btn">
             <span class="btn-text">Send Message</span>
-            <span class="btn-spinner" aria-hidden="true" style="display: none;">⏳ Sending...</span>
+            <span class="btn-spinner" aria-hidden="true" style="display: none;"><span class="spinner-disc"></span> Sending...</span>
           </button>
           <div id="form-status" role="status" aria-live="polite"></div>
         </form>
