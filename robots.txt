@@ -2,59 +2,112 @@
 # Personal developer portfolio & freelance services of Sandesh Patel.
 
 User-agent: *
-Allow: /
 Disallow: /404.html
+Allow: /
 
-# Main crawlers (explicitly welcome)
+# Main web crawlers (explicitly welcome)
 User-agent: Googlebot
+Disallow: /404.html
 Allow: /
 
 User-agent: Googlebot-Image
+Disallow: /404.html
 Allow: /
 
 User-agent: Bingbot
+Disallow: /404.html
 Allow: /
 Crawl-delay: 1
 
 User-agent: DuckDuckBot
+Disallow: /404.html
 Allow: /
 
-# AI crawlers - content is public and linkable, indexing allowed
+User-agent: YandexBot
+Disallow: /404.html
+Allow: /
+
+User-agent: Yahoo! Slurp
+Disallow: /404.html
+Allow: /
+
+User-agent: Sogou web spider
+Disallow: /404.html
+Allow: /
+
+User-agent: Baiduspider
+Disallow: /404.html
+Allow: /
+
+# AI training & answer engines - content is public, indexing allowed
 User-agent: GPTBot
+Disallow: /404.html
 Allow: /
 
 User-agent: OAI-SearchBot
+Disallow: /404.html
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /404.html
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /404.html
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: Claude-SearchBot
+Disallow: /404.html
 Allow: /
 
-User-agent: Claude-Web
+User-agent: Claude-User
+Disallow: /404.html
 Allow: /
 
 User-agent: PerplexityBot
+Disallow: /404.html
+Allow: /
+
+User-agent: Perplexity-User
+Disallow: /404.html
 Allow: /
 
 User-agent: Google-Extended
+Disallow: /404.html
 Allow: /
 
 User-agent: Applebot
+Disallow: /404.html
 Allow: /
 
 User-agent: Applebot-Extended
+Disallow: /404.html
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /404.html
+Allow: /
+
+User-agent: CCBot
+Disallow: /404.html
+Allow: /
+
+User-agent: Amazonbot
+Disallow: /404.html
+Allow: /
+
+User-agent: YouBot
+Disallow: /404.html
 Allow: /
 
 User-agent: Bytespider
+Disallow: /404.html
+Allow: /
 Crawl-delay: 5
 
 # Sitemap and structured-content discovery
 Sitemap: https://sandesh-portfolio.pages.dev/sitemap.xml
 
 # Machine-readable site summary (llmstxt.org)
-# See also: /llms.txt, /security.txt, /humans.txt, /manifest.webmanifest
+# See also: /llms.txt, /security.txt, /humans.txt, /manifest.webmanifest,
+# and /942b4bfed6eb64d65cfefb05d90392d6.txt (IndexNow key for Bing & Yandex)

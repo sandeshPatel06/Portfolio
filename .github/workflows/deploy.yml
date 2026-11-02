@@ -44,3 +44,13 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: c04e720708dcb939e074ad0b1e594bf8
         run: |
           npx wrangler@latest pages deploy . --project-name=sandesh-portfolio --branch=main
+
+      - name: Submit URLs to Bing & Yandex (IndexNow)
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          KEY="942b4bfed6eb64d65cfefb05d90392d6"
+          HOST="https://sandesh-portfolio.pages.dev"
+          curl -sS --max-time 20 -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{"host":"sandesh-portfolio.pages.dev","key":"'"$KEY"'","keyLocation":"'"$HOST"'/'"$KEY"'.txt","urlList":["'"$HOST"'/","'"$HOST"'/privacy.html","'"$HOST"'/terms.html"]}' \
+            && echo "IndexNow ping sent"
