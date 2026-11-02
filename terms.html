@@ -7,13 +7,26 @@
   <meta name="description" content="Terms of Service for Sandesh Patel Personal Developer Portfolio Website. Guidelines governing site usage, open-source code repositories, and project demonstrations.">
   <meta name="keywords" content="Sandesh Patel, Terms of Service, Terms and Conditions, Developer Portfolio, Open Source, Code Usage">
   <meta name="author" content="Sandesh Patel">
+  <meta name="theme-color" content="#f1f5f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Terms of Service | Sandesh Patel Developer Portfolio">
   <meta property="og:description" content="Read the Terms of Service governing Sandesh Patel's personal developer portfolio website and open-source project showcases.">
-  <meta property="og:image" content="img/sandesh_github.webp">
   <meta property="og:url" content="https://sandesh-portfolio.pages.dev/terms.html">
+  <meta property="og:site_name" content="Sandesh Patel Portfolio">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://sandesh-portfolio.pages.dev/img/sandesh_github.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="460">
+  <meta property="og:image:height" content="460">
+  <meta property="og:image:alt" content="Sandesh Patel - Full-Stack Developer & Systems Engineer">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service | Sandesh Patel Developer Portfolio">
+  <meta name="twitter:description" content="Read the Terms of Service governing Sandesh Patel's personal developer portfolio website and open-source project showcases.">
+  <meta name="twitter:image" content="https://sandesh-portfolio.pages.dev/img/sandesh_github.webp">
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="img/favicon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,15 +38,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Terms of Service | Sandesh Patel Developer Portfolio",
-    "url": "https://sandesh-portfolio.pages.dev/terms.html",
-    "description": "Terms of Service governing Sandesh Patel's personal developer portfolio website.",
-    "publisher": {
-      "@type": "Person",
-      "name": "Sandesh Patel",
-      "url": "https://sandesh-portfolio.pages.dev/"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://sandesh-portfolio.pages.dev/terms.html#webpage",
+        "url": "https://sandesh-portfolio.pages.dev/terms.html",
+        "name": "Terms of Service | Sandesh Patel Developer Portfolio",
+        "description": "Terms of Service governing Sandesh Patel's personal developer portfolio website and open-source project showcases.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://sandesh-portfolio.pages.dev/#website" },
+        "about": { "@id": "https://sandesh-portfolio.pages.dev/#person" },
+        "publisher": { "@id": "https://sandesh-portfolio.pages.dev/#person" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://sandesh-portfolio.pages.dev/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Terms of Service"
+            }
+          ]
+        }
+      }
+    ]
   }
   </script>
   <style>

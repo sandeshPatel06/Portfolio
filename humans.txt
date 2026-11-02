@@ -1,0 +1,24 @@
+/* SITE */
+Language: English (site), English + Hindi (person)
+Doctype: HTML5
+Standards: Semantic HTML5, CSS Custom Properties, schema.org JSON-LD
+Components: Typed.js (CDN), Formspree contact form
+Hosted on: Cloudflare Pages (sandesh-portfolio.pages.dev)
+Last update: 2026-11-02
+
+/* TEAM */
+Sandesh Patel — Full-Stack Web Developer & Systems Engineer
+Site: https://sandesh-portfolio.pages.dev/
+GitHub: https://github.com/sandeshPatel06
+LinkedIn: https://www.linkedin.com/in/sandesh-patel07
+X: https://x.com/SandeshPat007
+Location: Jabalpur, Madhya Pradesh, India
+
+/* ABOUT */
+Single-page personal portfolio: hero, about, services, featured projects,
+tech stack, work experience, certificates, education & contact section.
+Hand-written vanilla HTML/CSS/JS, zero build step, no npm dependencies.
+
+/* THANKS */
+Open-source tooling & docs that make static sites easy:
+Poppins font (Google Fonts), Typed.js, Formspree, Cloudflare Pages.

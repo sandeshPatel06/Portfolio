@@ -1,4 +1,60 @@
+# robots.txt for https://sandesh-portfolio.pages.dev/
+# Personal developer portfolio & freelance services of Sandesh Patel.
+
 User-agent: *
 Allow: /
+Disallow: /404.html
 
+# Main crawlers (explicitly welcome)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+# AI crawlers - content is public and linkable, indexing allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Crawl-delay: 5
+
+# Sitemap and structured-content discovery
 Sitemap: https://sandesh-portfolio.pages.dev/sitemap.xml
+
+# Machine-readable site summary (llmstxt.org)
+# See also: /llms.txt, /security.txt, /humans.txt, /manifest.webmanifest

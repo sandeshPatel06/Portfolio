@@ -1,0 +1,36 @@
+# Sandesh Patel — Full-Stack Developer & Freelance Engineer
+
+> Personal portfolio and freelance services landing page for Sandesh Patel, an Associate Developer at REAK INFOTECH LLP in Jabalpur, India. He builds production web apps, AI agents, and hardware-integrated streaming platforms. Open for freelance projects and contracts, typically replying within 24 hours. Available remotely worldwide.
+
+## Core facts
+
+- Job title: Full-Stack Web Developer & Systems Engineer
+- Employer: REAK INFOTECH LLP (Jabalpur, India) - live hardware streaming platform, low-latency video feeds, telemetry dashboards, internal Go CLI tooling
+- Core stack: Go, Python (Flask, FastAPI, Django), Vue.js, React, React Native, TypeScript, Tailwind CSS, PostgreSQL, SQLite, Docker, Linux, Cloudflare Pages
+- Specialties: full-stack web apps, chat + AI tooling (LLMs, WebSockets), live video & telemetry (RTSP/WebRTC), browser extensions (Manifest V3), mobile apps (Expo), backend APIs & object storage (Backblaze B2 / S3)
+- Education: Diploma in Computer Science & Engineering, Govt Polytechnic College Narsinghpur (2022-2025)
+- Contact: sandeshpatel.sp.93@gmail.com | WhatsApp +91 9399613606 | LinkedIn /in/sandesh-patel07 | GitHub @sandeshPatel06 | X @SandeshPat007
+
+## Pages
+
+- [Home / Portfolio](https://sandesh-portfolio.pages.dev/): hero, about, services, projects, skills, experience, certificates, education, contact
+- [Privacy Policy](https://sandesh-portfolio.pages.dev/privacy.html): handling of contact inquiries, resume previews, local storage
+- [Terms of Service](https://sandesh-portfolio.pages.dev/terms.html): site usage, open-source code repos, project demos
+
+## Featured projects
+
+- [Motion Mart E-Commerce](https://motion-mart-ecommerce.onrender.com): Flask e-commerce for motion graphics templates - OTP login, search, cart, automatic digital delivery ([source](https://github.com/sandeshPatel06/motion-mart-ecommerce))
+- [Jarvis AI Agent & Chat](https://jarvis-chat-0.vercel.app): AI chat assistant with session memory, sandboxed shell execution, WebSocket messaging via Django Channels, React Native client ([source](https://github.com/sandeshPatel06/jarvis-ai))
+- [get-Hike (Mini-Tracker)](https://sandeshpatel06.github.io/mini-tracker/): Linux time-tracking daemon under 15MB RAM, SQLite storage, Gemini AI daily focus summaries ([source](https://github.com/sandeshPatel06/mini-tracker))
+- [FileShare Vault](https://github.com/sandeshPatel06/file-share): Go-based real-time file sharing via Server-Sent Events with Backblaze B2 storage, no sign-up
+- [Local Video Transcriber](https://github.com/sandeshPatel06/link-video): offline speech-to-text with FFmpeg + faster-whisper + FastAPI + React; no cloud calls
+- [Tab Manager Pro](https://sandeshpatel06.github.io/tab-manager-pro/): Manifest V3 extension for Chrome/Firefox - duplicate-tab cleanup and saved workspaces ([source](https://github.com/sandeshPatel06/tab-manager-pro))
+
+## Services offered (freelance)
+
+1. Full-stack web app development (Go/Python backend, Vue/React frontend)
+2. Chat systems & AI tooling (WebSockets, LLM integration, conversation history)
+3. Live video & telemetry feeds (RTSP/WebRTC, IoT edge sensors, dashboards)
+4. Browser extensions & automation (Manifest V3, Chrome/Firefox)
+5. Mobile apps with React Native + Expo
+6. Backend APIs, PostgreSQL optimization & file storage pipelines

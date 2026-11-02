@@ -1,0 +1,48 @@
+{
+  "name": "Sandesh Patel | Full-Stack Developer & Software Engineer",
+  "short_name": "Sandesh Patel",
+  "description": "Portfolio & freelance services of Sandesh Patel - Full-Stack Web Developer, Go & Python Engineer, and Systems Developer.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "theme_color": "#4f46e5",
+  "background_color": "#f1f5f9",
+  "categories": ["portfolio", "developer", "business"],
+  "icons": [
+    {
+      "src": "/img/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/favicon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Sandesh",
+      "short_name": "Contact",
+      "url": "/#contact",
+      "description": "Discuss a freelance project"
+    },
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "url": "/#projects",
+      "description": "Featured projects and case studies"
+    },
+    {
+      "name": "My Resume",
+      "short_name": "Resume",
+      "url": "/#experience",
+      "description": "Work history and experience"
+    }
+  ]
+}
