@@ -35,6 +35,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700;800&display=swap" rel="stylesheet">
   <title>404 - Page Not Found | Sandesh Patel Portfolio</title>
   <link rel="stylesheet" href="all-in-one.css">
+
+  <!-- Theme bootstrap: applies saved/system theme before first paint (anti-FOUC) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
   <style>
     .error-container {
       min-height: calc(100vh - 220px);

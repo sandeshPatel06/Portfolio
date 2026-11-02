@@ -41,6 +41,18 @@
   <title>Sandesh Patel | Full-Stack Developer & Software Engineer</title>
   <link rel="canonical" href="https://sandesh-portfolio.pages.dev/">
   <link rel="stylesheet" href="all-in-one.css">
+
+  <!-- Theme bootstrap: applies saved/system theme before first paint (anti-FOUC) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
   <meta name="google-site-verification" content="nqitHUh908uqMEZdwsWPS-aIUuQuSeO3wPVCeDA7ZlI" />
   <meta name="google-site-verification" content="8d8686369b9d6380" />
 

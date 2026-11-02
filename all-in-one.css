@@ -17,11 +17,29 @@
   --text-muted: #475569;
   --background: #f1f5f9;
   --card-bg: #ffffff;
-  --card-border: #e2e8f0;
+  --card-border: #cbd5e1;
   --font-stack: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(15, 23, 42, 0.04);
   --shadow-hover: 0 12px 24px -4px rgba(79, 70, 229, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --glass-backdrop: blur(12px);
+    --glass-backdrop: blur(12px);
+
+  /* Accent button surfaces (always carry white text) */
+  --accent-bg: #4f46e5;
+  --accent-bg-hover: #4338ca;
+  --on-accent: #ffffff;
+  /* Indigo tint system for borders, focus rings & glow shadows */
+  --indigo-faint: rgba(79, 70, 229, 0.08);
+  --indigo-soft: rgba(79, 70, 229, 0.15);
+  --indigo-border: rgba(79, 70, 229, 0.3);
+  --indigo-glow: rgba(79, 70, 229, 0.16);
+  /* Placeholder text */
+  --ph-color: #5c6672;
+  /* Success / error status text (>= 4.5:1 against their tinted backgrounds) */
+  --ok-color: #047857;
+  --ok-tint: rgba(4, 120, 87, 0.12);
+  --err-color: #b91c1c;
+  --err-tint: rgba(185, 28, 28, 0.1);
 }
 
 /* ==== Dark Theme (Midnight Slate Studio) ==== */
@@ -42,10 +60,29 @@ html[data-theme="dark"] {
   --text-muted: #94a3b8;
   --background: #0b0f19;
   --card-bg: #111827;
-  --card-border: #1f2937;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
   --shadow-hover: 0 14px 28px -4px rgba(0, 0, 0, 0.6), 0 0 20px rgba(129, 140, 248, 0.15);
-  --glass-backdrop: blur(16px);
+    --glass-backdrop: blur(16px);
+
+  /* Accent button surfaces - tuned so white text >= 4.5:1 (#5e63f2 = 4.62) */
+  --accent-bg: #5e63f2;
+  --accent-bg-hover: #5b5ff0;
+  --on-accent: #ffffff;
+  /* Border lifted from #1f2937 (1.2:1) to slate-600 for visible card edges */
+  --card-border: #5d6878;
+  /* Indigo tints flipped to the light-accent channel in dark mode */
+  --indigo-faint: rgba(129, 140, 248, 0.13);
+  --indigo-soft: rgba(129, 140, 248, 0.22);
+  --indigo-border: rgba(129, 140, 248, 0.72);
+  --indigo-glow: rgba(129, 140, 248, 0.22);
+  /* Placeholder text */
+  --ph-color: #94a3b8;
+  /* Success / error status text (>= 4.5:1 against their tinted backgrounds) */
+  --ok-color: #10b981;
+  --ok-tint: rgba(16, 185, 129, 0.16);
+  --err-color: #f87171;
+  --err-tint: rgba(248, 113, 113, 0.14);
 }
 
 /* ==== Global Box-Sizing & Reset ==== */
@@ -152,7 +189,7 @@ nav {
 nav.scrolled {
   height: 58px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border-color: rgba(79, 70, 229, 0.25);
+  border-color: var(--indigo-border);
 }
 
 /* Branded Logo */
@@ -177,12 +214,12 @@ nav .logo:hover {
   justify-content: center;
   width: 34px;
   height: 34px;
-  background: var(--primary-color);
+  background: var(--accent-bg);
   color: #ffffff;
   border-radius: 9px;
   font-size: 0.85rem;
   font-weight: 800;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 4px 12px var(--indigo-glow);
 }
 .logo-text {
   color: var(--text-light);
@@ -231,20 +268,20 @@ nav .nav-actions {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
   color: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 8px 18px;
   border-radius: 9px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.22);
+  box-shadow: 0 4px 14px var(--indigo-glow);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .nav-cta-btn:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--accent-bg-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 6px 18px var(--indigo-glow);
 }
 
 /* Centered Navigation Menu Links on Desktop */
@@ -291,8 +328,8 @@ nav ul li a:hover {
 }
 nav ul li a.active {
   color: #ffffff;
-  background: var(--primary-color);
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+  background: var(--accent-bg);
+  box-shadow: 0 4px 14px var(--indigo-glow);
 }
 
 /* Mobile Hamburger Menu Button */
@@ -315,7 +352,7 @@ nav ul li a.active {
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--accent-bg);
   border-radius: 2px;
   position: absolute;
   transition: all 0.3s ease;
@@ -366,7 +403,7 @@ nav ul li a.active {
 }
 .firstsection:hover {
   box-shadow: var(--shadow-hover);
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: var(--indigo-border);
 }
 .firstsection > div {
   flex: 1;
@@ -418,15 +455,15 @@ nav ul li a.active {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #10b981;
-  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+  background-color: var(--ok-color);
+  box-shadow: 0 0 0 2px var(--ok-tint);
   display: inline-block;
   animation: pulse-dot 2s infinite ease-in-out;
 }
 @keyframes pulse-dot {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--ok-tint); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px transparent; }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 transparent; }
 }
 .hero-subtext {
   font-size: 1.05rem;
@@ -485,7 +522,7 @@ nav ul li a.active {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
 }
 .about-photo-wrapper {
   display: inline-block;
@@ -500,7 +537,7 @@ nav ul li a.active {
 }
 .leftsection .btn,
 .buttons .btn {
-  background: var(--primary-color);
+  background: var(--accent-bg);
   color: #ffffff;
   padding: 0 24px;
   height: 46px;
@@ -515,16 +552,16 @@ nav ul li a.active {
   border: none;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 4px 15px var(--indigo-glow);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   box-sizing: border-box;
   line-height: 1;
 }
 .leftsection .btn:hover,
 .buttons .btn:hover {
-  background: var(--primary-hover);
+  background: var(--accent-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 25px var(--indigo-glow);
 }
 .leftsection .btn-secondary,
 .buttons .btn-secondary {
@@ -544,7 +581,7 @@ nav ul li a.active {
 .btn-group {
   display: inline-flex;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 4px 15px var(--indigo-glow);
   border-radius: 10px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: 46px;
@@ -552,10 +589,10 @@ nav ul li a.active {
 }
 .btn-group:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 25px var(--indigo-glow);
 }
 .btn-group-left {
-  background: var(--primary-color);
+  background: var(--accent-bg);
   color: #ffffff;
   padding: 0 20px;
   height: 46px;
@@ -579,7 +616,7 @@ nav ul li a.active {
   font-family: inherit;
 }
 .btn-group-right {
-  background: var(--primary-color);
+  background: var(--accent-bg);
   color: #ffffff;
   padding: 0 14px;
   height: 46px;
@@ -599,7 +636,7 @@ nav ul li a.active {
 }
 .btn-group-left:hover,
 .btn-group-right:hover {
-  background: var(--primary-hover);
+  background: var(--accent-bg-hover);
 }
 .rightsection {
   text-align: center;
@@ -633,7 +670,7 @@ nav ul li a.active {
 .services-container:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: var(--indigo-border);
 }
 .services-container h2 {
   color: var(--primary-color);
@@ -699,8 +736,8 @@ textarea:focus-visible {
 }
 .service-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(79, 70, 229, 0.35);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+  border-color: var(--indigo-border);
+  box-shadow: 0 8px 24px var(--indigo-glow);
 }
 .service-icon {
   width: 48px;
@@ -765,8 +802,8 @@ textarea:focus-visible {
   flex-shrink: 0;
 }
 .hire-cta-banner {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(37, 99, 235, 0.04) 100%);
-  border: 1px solid rgba(79, 70, 229, 0.25);
+  background: linear-gradient(135deg, var(--indigo-faint) 0%, transparent 100%);
+  border: 1px solid var(--indigo-border);
   border-radius: 16px;
   padding: 24px 28px;
   display: flex;
@@ -788,7 +825,7 @@ textarea:focus-visible {
   color: var(--text-muted);
 }
 .btn-hire {
-  background: var(--primary-color);
+  background: var(--accent-bg);
   color: #ffffff !important;
   font-weight: 600;
   padding: 10px 22px;
@@ -797,14 +834,14 @@ textarea:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 4px 14px var(--indigo-glow);
   transition: all 0.25s ease;
   white-space: nowrap;
 }
 .btn-hire:hover {
-  background: var(--primary-hover);
+  background: var(--accent-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 6px 20px var(--indigo-glow);
 }
 
 /* ==== Project Cards & Action Links ==== */
@@ -834,8 +871,8 @@ textarea:focus-visible {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .project-item:hover {
-  border-color: rgba(79, 70, 229, 0.4);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+  border-color: var(--indigo-border);
+  box-shadow: 0 8px 24px var(--indigo-glow);
   transform: translateY(-3px);
 }
 .project-header-row {
@@ -938,16 +975,16 @@ textarea:focus-visible {
   color: var(--primary-color) !important;
 }
 .project-link.live-link {
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
   color: #ffffff !important;
   border: 1px solid var(--primary-color);
-  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 3px 10px var(--indigo-glow);
 }
 .project-link.live-link:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--accent-bg-hover);
   border-color: var(--primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 4px 14px var(--indigo-glow);
 }
 
 /* ==== Section Heading Icons ==== */
@@ -1000,7 +1037,7 @@ h2:hover .heading-icon {
 }
 .skills-cat-card:hover {
   border-color: var(--primary-color);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+  box-shadow: 0 8px 24px var(--indigo-glow);
   transform: translateY(-2px);
 }
 .skills-cat-header {
@@ -1120,7 +1157,7 @@ h2:hover .heading-icon {
 }
 .secondsection:hover {
   box-shadow: var(--shadow-hover);
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: var(--indigo-border);
 }
 .section-heading {
   text-align: center;
@@ -1157,10 +1194,10 @@ h2:hover .heading-icon {
   top: 6px;
   width: 14px;
   height: 14px;
-  background: var(--primary-color);
+  background: var(--accent-bg);
   border-radius: 50%;
   border: 3px solid var(--card-bg);
-  box-shadow: 0 0 12px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 0 12px var(--indigo-glow);
 }
 .timeline-badge-role {
   display: inline-block;
@@ -1168,9 +1205,9 @@ h2:hover .heading-icon {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background-color: rgba(16, 185, 129, 0.12);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background-color: var(--ok-tint);
+  color: var(--ok-color);
+  border: 1px solid var(--ok-tint);
   padding: 3px 10px;
   border-radius: 12px;
   margin-bottom: 8px;
@@ -1220,7 +1257,7 @@ h2:hover .heading-icon {
 }
 #contact:hover {
   box-shadow: var(--shadow-hover);
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: var(--indigo-border);
 }
 #contact h2 {
   text-align: center;
@@ -1380,14 +1417,19 @@ h2:hover .heading-icon {
 #contact textarea {
   min-height: 120px;
 }
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: var(--ph-color);
+  opacity: 1;
+}
 #contact input:focus,
 #contact textarea:focus {
   border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 0 0 4px var(--indigo-soft);
 }
 #contact button.btn {
-  background: var(--primary-color);
+  background: var(--accent-bg);
   color: #fff;
   padding: 14px 24px;
   min-height: 48px;
@@ -1396,7 +1438,7 @@ h2:hover .heading-icon {
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 4px 15px var(--indigo-glow);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
   margin-top: 4px;
   width: 100%;
@@ -1406,9 +1448,9 @@ h2:hover .heading-icon {
   gap: 8px;
 }
 #contact button.btn:hover:not(:disabled) {
-  background: var(--primary-hover);
+  background: var(--accent-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 25px var(--indigo-glow);
 }
 #contact button.btn:disabled {
   opacity: 0.7;
@@ -1428,15 +1470,15 @@ h2:hover .heading-icon {
   padding: 8px;
 }
 #form-status.status-success {
-  color: #10b981;
-  background-color: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--ok-color);
+  background-color: var(--ok-tint);
+  border: 1px solid var(--ok-tint);
   padding: 12px 16px;
 }
 #form-status.status-error {
-  color: #ef4444;
-  background-color: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: var(--err-color);
+  background-color: var(--err-tint);
+  border: 1px solid var(--err-tint);
   padding: 12px 16px;
 }
 #form-status a {
@@ -1542,7 +1584,7 @@ h2:hover .heading-icon {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .modal-icon-btn:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
   color: #ffffff;
 }
 .modal-close-btn {
@@ -1557,8 +1599,8 @@ h2:hover .heading-icon {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .modal-close-btn:hover {
-  color: #ef4444;
-  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--err-color);
+  background-color: var(--err-tint);
 }
 .pdf-modal-body {
   flex: 1;
@@ -1626,10 +1668,10 @@ footer {
 }
 .social-btn:hover {
   transform: translateY(-2px);
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
   border-color: var(--primary-color);
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 6px 18px var(--indigo-glow);
 }
 .social-btn svg {
   transition: transform 0.25s ease;
@@ -1712,7 +1754,7 @@ footer {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -2109,7 +2151,7 @@ footer {
   width: 100%;
 }
 .btn-cert-preview:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-bg);
   border-color: var(--primary-color);
   color: #ffffff;
 }

@@ -38,6 +38,18 @@
   <link rel="canonical" href="https://sandesh-portfolio.pages.dev/terms.html">
   <link rel="stylesheet" href="all-in-one.css">
 
+  <!-- Theme bootstrap: applies saved/system theme before first paint (anti-FOUC) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
